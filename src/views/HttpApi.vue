@@ -110,7 +110,7 @@ export default {
       if (!this.isLink(props)) {
         return
       }
-      this.uri = `/api/v4${props.target}`
+      this.uri = `/himq_admin/api/v4${props.target}`
       this.scrollTop = document.documentElement.scrollTop
       document.documentElement.scrollTop = 0
       const httpRequest = (method) => {
@@ -149,7 +149,7 @@ export default {
         Object.keys(data).forEach(item => {
           this.tableData.push({
             method: data[item].method,
-            path: `/api/v4${data[item].path.startsWith('/') ? data[item].path : `/${data[item].path}`}`,
+            path: `/himq_admin/api/v4${data[item].path.startsWith('/') ? data[item].path : `/${data[item].path}`}`,
             target: data[item].path,
             description: data[item].descr,
           })
